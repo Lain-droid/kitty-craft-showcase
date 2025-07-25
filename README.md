@@ -1,6 +1,6 @@
-# Kitty Craft Showcase
+# CatsBoxPVP
 
-A modern React application showcasing kitty crafts with a beautiful UI built using Vite, React, TypeScript, and Tailwind CSS.
+A modern React application for CatsBoxPVP gaming platform with a beautiful UI built using Vite, React, TypeScript, and Tailwind CSS.
 
 ## Features
 
@@ -23,7 +23,7 @@ A modern React application showcasing kitty crafts with a beautiful UI built usi
 1. Clone the repository:
 ```bash
 git clone <your-repo-url>
-cd kitty-craft-showcase
+cd CatsBoxPVP
 ```
 
 2. Install dependencies:
