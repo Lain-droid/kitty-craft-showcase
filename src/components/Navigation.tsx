@@ -19,7 +19,6 @@ const Navigation = () => {
   const navItems = [
     { label: 'Features', href: '#features' },
     { label: 'Connect', href: '#server-info' },
-    { label: 'Leaderboard', href: '#leaderboard' },
     { label: 'Rules', href: '#rules' },
     { label: 'Team', href: '#team' },
     { label: 'Contact', href: '#contact' }
