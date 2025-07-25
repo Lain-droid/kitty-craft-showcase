@@ -18,7 +18,6 @@ const Navigation = () => {
 
   const navItems = [
     { label: 'Features', href: '#features' },
-    { label: 'Kits', href: '#kits' },
     { label: 'Connect', href: '#server-info' },
     { label: 'Gallery', href: '#gallery' },
     { label: 'FAQ', href: '#faq' },

@@ -2,7 +2,6 @@ import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
 import ServerStatus from '@/components/ServerStatus';
 import Features from '@/components/Features';
-import Kits from '@/components/Kits';
 import ServerInfo from '@/components/ServerInfo';
 import Gallery from '@/components/Gallery';
 import Rules from '@/components/Rules';
@@ -18,7 +17,6 @@ const Index = () => {
       <Hero />
       <ServerStatus />
       <Features />
-      <Kits />
       <ServerInfo />
       <Gallery />
       <Rules />
