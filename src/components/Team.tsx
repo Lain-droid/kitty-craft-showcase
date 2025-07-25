@@ -34,7 +34,7 @@ const Team = () => {
             Staff Team
           </h2>
           <p className="text-xl text-muted-foreground">
-            Experienced team managing CATS BOXPVP server
+            Server management team
           </p>
         </div>
 

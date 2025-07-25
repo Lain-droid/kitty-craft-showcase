@@ -4,26 +4,26 @@ const Features = () => {
   const features = [
     {
       icon: Sword,
-      title: "Fast PvP Experience",
-      description: "Defeat your opponents with adrenaline-filled, fast-paced PvP battles.",
+      title: "Competitive PvP",
+      description: "Professional BoxPvP battles with ranking system and tournaments.",
       color: "text-gaming-primary"
     },
     {
       icon: Pickaxe,
-      title: "Custom Mining System",
-      description: "Resource gathering with advanced mining system and special enhancements.",
+      title: "Custom Kits",
+      description: "Unique kit system with balanced equipment and special abilities.",
       color: "text-gaming-accent"
     },
     {
       icon: Shield,
-      title: "Minecraft Arenas",
-      description: "Fight in specially designed, Minecraft-themed arenas.",
+      title: "Premium Arenas",
+      description: "Multiple arena types with different gameplay mechanics.",
       color: "text-gaming-secondary"
     },
     {
       icon: Zap,
-      title: "Anti-Cheat Protection",
-      description: "Fair gaming experience with advanced anti-cheat system.",
+      title: "Anti-Cheat System",
+      description: "Advanced protection ensuring fair gameplay for everyone.",
       color: "text-gaming-primary"
     }
   ];
@@ -37,7 +37,7 @@ const Features = () => {
             Server Features
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Unique features waiting for you on CATS BOXPVP server
+            What makes CATS BOXPVP unique
           </p>
         </div>
 

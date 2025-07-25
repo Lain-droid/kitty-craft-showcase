@@ -61,7 +61,7 @@ const Hero = () => {
             CATS BOXPVP
           </h1>
           <p className="text-xl md:text-2xl text-gaming-primary font-bold tracking-widest">
-            Fight, Win, Reach The Top!
+            Professional PvP Arena
           </p>
         </div>
 
@@ -91,6 +91,12 @@ const Hero = () => {
           <Button
             size="lg"
             className="bg-gradient-to-r from-gaming-primary to-gaming-secondary text-gaming-dark font-bold px-8 py-6 text-lg hover:scale-105 transition-all duration-300 neon-glow"
+            onClick={() => {
+              const element = document.querySelector('#server-info');
+              if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
           >
             <Play className="w-5 h-5 mr-2" />
             Join Server
@@ -99,6 +105,12 @@ const Hero = () => {
             variant="outline"
             size="lg"
             className="border-gaming-secondary text-gaming-secondary hover:bg-gaming-secondary hover:text-gaming-dark px-8 py-6 text-lg purple-glow transition-all duration-300"
+            onClick={() => {
+              const element = document.querySelector('#features');
+              if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
           >
             Features
           </Button>

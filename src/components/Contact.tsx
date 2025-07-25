@@ -22,8 +22,8 @@ const Contact = () => {
     {
       icon: MessageCircle,
       label: "Discord",
-      value: "Coming Soon...",
-      link: "#",
+      value: "Join our community",
+      link: "https://discord.gg/catsboxpvp",
       color: "text-gaming-secondary",
       bgColor: "from-gaming-secondary/20 to-gaming-secondary/5"
     }
@@ -38,7 +38,7 @@ const Contact = () => {
           Contact
         </h2>
         <p className="text-xl text-muted-foreground">
-          Get in touch with us for any questions
+          Contact us for support and questions
         </p>
         </div>
 
@@ -65,18 +65,16 @@ const Contact = () => {
                 {method.value}
               </p>
 
-              {method.link !== "#" && (
-                <Button
-                  asChild
-                  variant="outline"
-                  size="sm"
-                  className={`border-current ${method.color} hover:bg-current hover:text-gaming-dark transition-all duration-300`}
-                >
-                  <a href={method.link} target="_blank" rel="noopener noreferrer">
-                    Contact
-                  </a>
-                </Button>
-              )}
+              <Button
+                asChild
+                variant="outline"
+                size="sm"
+                className={`border-current ${method.color} hover:bg-current hover:text-gaming-dark transition-all duration-300`}
+              >
+                <a href={method.link} target="_blank" rel="noopener noreferrer">
+                  {method.label === 'Discord' ? 'Join' : 'Contact'}
+                </a>
+              </Button>
             </div>
           ))}
         </div>
