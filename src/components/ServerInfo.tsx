@@ -31,13 +31,13 @@ const ServerInfo = () => {
       }
       
       toast({
-        title: "Kopyalandı!",
-        description: `${type === 'bedrock' ? 'Bedrock' : 'Java'} sunucu bilgileri kopyalandı.`,
+        title: "Copied!",
+        description: `${type === 'bedrock' ? 'Bedrock' : 'Java'} server information copied.`,
       });
     } catch (err) {
       toast({
-        title: "Hata",
-        description: "Bilgiler kopyalanamadı.",
+        title: "Error",
+        description: "Failed to copy information.",
         variant: "destructive",
       });
     }
@@ -49,10 +49,10 @@ const ServerInfo = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold gradient-text mb-4">
-            Sunucuya Bağlan
+            Connect to Server
           </h2>
           <p className="text-xl text-muted-foreground">
-            Bedrock ve Java sürümleri için bağlantı bilgileri
+            Connection information for Bedrock and Java editions
           </p>
         </div>
 
@@ -98,7 +98,7 @@ const ServerInfo = () => {
               className="w-full bg-gaming-primary hover:bg-gaming-primary/80 text-gaming-dark font-bold"
             >
               {copiedBedrock ? <Check className="w-4 h-4 mr-2" /> : <Copy className="w-4 h-4 mr-2" />}
-              {copiedBedrock ? 'Kopyalandı!' : 'IP:Port Kopyala'}
+              {copiedBedrock ? 'Copied!' : 'Copy IP:Port'}
             </Button>
           </div>
 
@@ -135,7 +135,7 @@ const ServerInfo = () => {
               className="w-full bg-gaming-secondary hover:bg-gaming-secondary/80 text-gaming-dark font-bold"
             >
               {copiedJava ? <Check className="w-4 h-4 mr-2" /> : <Copy className="w-4 h-4 mr-2" />}
-              {copiedJava ? 'Kopyalandı!' : 'IP Kopyala'}
+              {copiedJava ? 'Copied!' : 'Copy IP'}
             </Button>
           </div>
         </div>

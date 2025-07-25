@@ -22,7 +22,7 @@ const Contact = () => {
     {
       icon: MessageCircle,
       label: "Discord",
-      value: "Yakında...",
+      value: "Coming Soon...",
       link: "#",
       color: "text-gaming-secondary",
       bgColor: "from-gaming-secondary/20 to-gaming-secondary/5"
@@ -34,12 +34,12 @@ const Contact = () => {
       <div className="max-w-4xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold gradient-text mb-4">
-            İletişim
-          </h2>
-          <p className="text-xl text-muted-foreground">
-            Sorularınız için bizimle iletişime geçin
-          </p>
+        <h2 className="text-4xl md:text-5xl font-bold gradient-text mb-4">
+          Contact
+        </h2>
+        <p className="text-xl text-muted-foreground">
+          Get in touch with us for any questions
+        </p>
         </div>
 
         {/* Contact Cards */}
@@ -73,7 +73,7 @@ const Contact = () => {
                   className={`border-current ${method.color} hover:bg-current hover:text-gaming-dark transition-all duration-300`}
                 >
                   <a href={method.link} target="_blank" rel="noopener noreferrer">
-                    İletişime Geç
+                    Contact
                   </a>
                 </Button>
               )}
@@ -84,14 +84,14 @@ const Contact = () => {
         {/* Market Info */}
         <div className="glass-card p-8 text-center animate-fade-in-up">
           <h3 className="text-2xl font-bold mb-4 gradient-text">
-            Market
+            Store
           </h3>
           <p className="text-muted-foreground mb-6">
-            Kit ve Rank satın alarak sunucuyu destekleyebilirsiniz.
+            Support the server by purchasing kits and ranks.
           </p>
           <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-gaming-accent/20 to-gaming-accent/5 text-gaming-accent font-bold">
             <MessageCircle className="w-5 h-5" />
-            Yakında Geliyor!
+            Coming Soon!
           </div>
         </div>
       </div>

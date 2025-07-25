@@ -10,7 +10,7 @@ const Footer = () => {
 
           {/* Copyright */}
           <div className="text-muted-foreground text-sm">
-            © 2024 CATS BOXPVP. Tüm hakları saklıdır.
+            © 2024 CATS BOXPVP. All rights reserved.
           </div>
 
           {/* Status */}
@@ -25,7 +25,7 @@ const Footer = () => {
         {/* Additional Info */}
         <div className="mt-8 pt-8 border-t border-white/5 text-center">
           <p className="text-muted-foreground text-sm">
-            Bu sunucu Minecraft'ın resmi bir ürünü değildir ve Mojang Studios tarafından onaylanmamıştır.
+            This server is not an official Minecraft product and is not approved by Mojang Studios.
           </p>
         </div>
       </div>

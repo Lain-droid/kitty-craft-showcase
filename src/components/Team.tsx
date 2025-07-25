@@ -31,10 +31,10 @@ const Team = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold gradient-text mb-4">
-            Yetkili Takım
+            Staff Team
           </h2>
           <p className="text-xl text-muted-foreground">
-            CATS BOXPVP sunucusunu yöneten deneyimli takım
+            Experienced team managing CATS BOXPVP server
           </p>
         </div>
 

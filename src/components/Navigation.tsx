@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Sun, Moon } from 'lucide-react';
+import { useTheme } from 'next-themes';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const { theme, setTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,10 +17,10 @@ const Navigation = () => {
   }, []);
 
   const navItems = [
-    { label: 'Özellikler', href: '#features' },
-    { label: 'Sunucu Bilgileri', href: '#server-info' },
-    { label: 'Takım', href: '#team' },
-    { label: 'İletişim', href: '#contact' }
+    { label: 'Features', href: '#features' },
+    { label: 'Server Info', href: '#server-info' },
+    { label: 'Team', href: '#team' },
+    { label: 'Contact', href: '#contact' }
   ];
 
   const scrollToSection = (href: string) => {
@@ -50,17 +52,35 @@ const Navigation = () => {
               {item.label}
             </button>
           ))}
+          <Button
+            variant="ghost"
+            size="sm"
+            onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+            className="text-gaming-primary hover:bg-gaming-primary/10"
+          >
+            {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+          </Button>
         </div>
 
-        {/* Mobile Menu Button */}
-        <Button
-          variant="ghost"
-          size="sm"
-          className="md:hidden text-gaming-primary"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-        </Button>
+        {/* Mobile Controls */}
+        <div className="md:hidden flex items-center gap-2">
+          <Button
+            variant="ghost"
+            size="sm"
+            onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+            className="text-gaming-primary hover:bg-gaming-primary/10"
+          >
+            {theme === 'dark' ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+          </Button>
+          <Button
+            variant="ghost"
+            size="sm"
+            className="text-gaming-primary"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          </Button>
+        </div>
       </div>
 
       {/* Mobile Navigation */}

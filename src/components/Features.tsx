@@ -4,26 +4,26 @@ const Features = () => {
   const features = [
     {
       icon: Sword,
-      title: "Hızlı PvP Deneyimi",
-      description: "Adrenalin dolu, hızlı tempolu PvP savaşları ile rakiplerinizi alt edin.",
+      title: "Fast PvP Experience",
+      description: "Defeat your opponents with adrenaline-filled, fast-paced PvP battles.",
       color: "text-gaming-primary"
     },
     {
       icon: Pickaxe,
-      title: "Özel Mining Sistemi",
-      description: "Gelişmiş mining sistemi ve özel iyileştirmeler ile kaynak toplama.",
+      title: "Custom Mining System",
+      description: "Resource gathering with advanced mining system and special enhancements.",
       color: "text-gaming-accent"
     },
     {
       icon: Shield,
-      title: "Minecraft Arenaları",
-      description: "Özel tasarlanmış, Minecraft temalı arenalarda savaşın.",
+      title: "Minecraft Arenas",
+      description: "Fight in specially designed, Minecraft-themed arenas.",
       color: "text-gaming-secondary"
     },
     {
       icon: Zap,
-      title: "Anti-Cheat Koruması",
-      description: "Gelişmiş anti-cheat sistemi ile adil oyun deneyimi.",
+      title: "Anti-Cheat Protection",
+      description: "Fair gaming experience with advanced anti-cheat system.",
       color: "text-gaming-primary"
     }
   ];
@@ -34,10 +34,10 @@ const Features = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold gradient-text mb-4">
-            Sunucu Özellikleri
+            Server Features
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            CATS BOXPVP sunucusunda sizi bekleyen eşsiz özellikler
+            Unique features waiting for you on CATS BOXPVP server
           </p>
         </div>
 

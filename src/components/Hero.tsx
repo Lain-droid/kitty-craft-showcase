@@ -15,14 +15,14 @@ const Hero = () => {
       await navigator.clipboard.writeText(serverIP);
       setCopied(true);
       toast({
-        title: "Server IP Kopyalandı!",
-        description: "Sunucu IP'si panoya kopyalandı.",
+        title: "Server IP Copied!",
+        description: "Server IP has been copied to clipboard.",
       });
       setTimeout(() => setCopied(false), 2000);
     } catch (err) {
       toast({
-        title: "Kopyalama Hatası",
-        description: "IP adresi kopyalanamadı.",
+        title: "Copy Error",
+        description: "Failed to copy IP address.",
         variant: "destructive",
       });
     }
@@ -81,7 +81,7 @@ const Hero = () => {
               className="neon-glow border-gaming-primary text-gaming-primary hover:bg-gaming-primary hover:text-gaming-dark transition-all duration-300"
             >
               {copied ? <Check className="w-5 h-5" /> : <Copy className="w-5 h-5" />}
-              {copied ? 'Kopyalandı!' : 'Kopyala'}
+              {copied ? 'Copied!' : 'Copy'}
             </Button>
           </div>
         </div>
@@ -93,21 +93,21 @@ const Hero = () => {
             className="bg-gradient-to-r from-gaming-primary to-gaming-secondary text-gaming-dark font-bold px-8 py-6 text-lg hover:scale-105 transition-all duration-300 neon-glow"
           >
             <Play className="w-5 h-5 mr-2" />
-            Oyuna Katıl
+            Join Server
           </Button>
           <Button
             variant="outline"
             size="lg"
             className="border-gaming-secondary text-gaming-secondary hover:bg-gaming-secondary hover:text-gaming-dark px-8 py-6 text-lg purple-glow transition-all duration-300"
           >
-            Özellikler
+            Features
           </Button>
         </div>
 
         {/* Stats */}
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 animate-fade-in-up">
           {[
-            { label: "Aktif Oyuncular", value: "24/7" },
+            { label: "Active Players", value: "24/7" },
             { label: "Uptime", value: "99.9%" },
             { label: "PvP Arena", value: "Premium" }
           ].map((stat, index) => (
