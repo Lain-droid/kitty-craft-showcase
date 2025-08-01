@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { Menu, X, Sun, Moon, Gamepad2 } from 'lucide-react';
+import { Menu, X, Sun, Moon, Server } from 'lucide-react';
 import { useTheme } from 'next-themes';
 
 const Navigation = () => {
@@ -33,44 +33,41 @@ const Navigation = () => {
   };
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
-        ? 'glass-effect py-3 shadow-lg shadow-purple-500/10' 
-        : 'py-6 bg-transparent'
+        ? 'bg-background/95 backdrop-blur-sm border-b border-border shadow-sm' 
+        : 'bg-transparent'
     }`}>
-      <div className="max-w-6xl mx-auto px-4 flex items-center justify-between">
+      <div className="max-w-6xl mx-auto px-4 flex items-center justify-between h-16">
         {/* Logo */}
         <div 
-          className="flex items-center gap-3 font-bold text-xl gradient-text cursor-pointer hover-glow group" 
+          className="flex items-center gap-2 font-bold text-xl text-foreground cursor-pointer hover:text-primary transition-colors" 
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         >
-          <div className="w-8 h-8 bg-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-            <Gamepad2 className="w-5 h-5 text-white" />
+          <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+            <Server className="w-4 h-4 text-primary-foreground" />
           </div>
-          <span className="text-glow">CATS BOXPVP</span>
+          <span>CATS BOXPVP</span>
         </div>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-8">
-          {navItems.map((item, index) => (
+        <div className="hidden md:flex items-center gap-6">
+          {navItems.map((item) => (
             <button
               key={item.href}
               onClick={() => scrollToSection(item.href)}
-              className="relative text-purple-200 hover:text-white transition-all duration-300 font-medium group"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className="text-muted-foreground hover:text-foreground transition-colors duration-200 font-medium"
             >
-              <span className="relative z-10">{item.label}</span>
-              <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-purple-400 group-hover:w-full transition-all duration-300"></div>
-              <div className="absolute inset-0 bg-purple-600/20 rounded-lg scale-0 group-hover:scale-100 transition-transform duration-300 -z-10"></div>
+              {item.label}
             </button>
           ))}
           <Button
             variant="ghost"
             size="sm"
             onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-            className="text-purple-400 hover:text-white hover:bg-purple-600/20 transition-all duration-300 hover-glow"
+            className="text-muted-foreground hover:text-foreground"
           >
-            {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+            {theme === 'dark' ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
           </Button>
         </div>
 
@@ -80,36 +77,32 @@ const Navigation = () => {
             variant="ghost"
             size="sm"
             onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-            className="text-purple-400 hover:text-white hover:bg-purple-600/20 transition-all duration-300"
+            className="text-muted-foreground hover:text-foreground"
           >
             {theme === 'dark' ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
           </Button>
           <Button
             variant="ghost"
             size="sm"
-            className="text-purple-400 hover:text-white hover:bg-purple-600/20 transition-all duration-300"
+            className="text-muted-foreground hover:text-foreground"
             onClick={() => setIsOpen(!isOpen)}
           >
-            {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            {isOpen ? <X className="w-4 h-4" /> : <Menu className="w-4 h-4" />}
           </Button>
         </div>
       </div>
 
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="md:hidden glass-effect mt-4 mx-4 p-6 scale-in border border-purple-500/20">
-          <div className="flex flex-col gap-4">
-            {navItems.map((item, index) => (
+        <div className="md:hidden border-t border-border bg-background/95 backdrop-blur-sm">
+          <div className="px-4 py-4 space-y-2">
+            {navItems.map((item) => (
               <button
                 key={item.href}
                 onClick={() => scrollToSection(item.href)}
-                className="text-left text-purple-200 hover:text-white transition-all duration-300 font-medium py-3 px-4 rounded-lg hover:bg-purple-600/20 group"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                className="block w-full text-left text-muted-foreground hover:text-foreground transition-colors duration-200 font-medium py-2 px-2 rounded hover:bg-muted"
               >
-                <span className="relative">
-                  {item.label}
-                  <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-purple-400 group-hover:w-full transition-all duration-300"></div>
-                </span>
+                {item.label}
               </button>
             ))}
           </div>
