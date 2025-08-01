@@ -2,147 +2,55 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Modern Purple & Black Gaming Theme with Beautiful Animations */
 
 @layer base {
   :root {
-    /* Gaming Dark Theme */
-    --background: 222 84% 4.9%;
-    --foreground: 180 100% 95%;
+    /* Modern Purple & Black Theme */
+    --background: 240 10% 3.9%;
+    --foreground: 300 20% 95%;
 
-    --card: 226 71% 8%;
-    --card-foreground: 180 100% 95%;
+    --card: 240 10% 7%;
+    --card-foreground: 300 20% 95%;
 
-    --popover: 226 71% 8%;
-    --popover-foreground: 180 100% 95%;
+    --popover: 240 10% 7%;
+    --popover-foreground: 300 20% 95%;
 
-    --primary: 177 100% 50%;
-    --primary-foreground: 222 84% 4.9%;
+    --primary: 270 100% 70%;
+    --primary-foreground: 240 10% 3.9%;
 
-    --secondary: 298 84% 60%;
-    --secondary-foreground: 180 100% 95%;
+    --secondary: 270 100% 50%;
+    --secondary-foreground: 300 20% 95%;
 
-    --muted: 226 71% 12%;
-    --muted-foreground: 180 20% 70%;
+    --muted: 240 10% 12%;
+    --muted-foreground: 300 20% 70%;
 
-    --accent: 298 84% 60%;
-    --accent-foreground: 180 100% 95%;
+    --accent: 280 100% 60%;
+    --accent-foreground: 300 20% 95%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 180 100% 95%;
+    --destructive-foreground: 300 20% 95%;
 
-    --border: 226 71% 15%;
-    --input: 226 71% 12%;
-    --ring: 177 100% 50%;
+    --border: 240 10% 15%;
+    --input: 240 10% 12%;
+    --ring: 270 100% 70%;
 
     /* Gaming Specific Colors */
-    --gaming-primary: 177 100% 50%;
-    --gaming-secondary: 298 84% 60%;
-    --gaming-accent: 60 100% 50%;
-    --gaming-dark: 222 84% 4.9%;
-    --gaming-darker: 220 85% 3%;
+    --gaming-primary: 270 100% 70%;
+    --gaming-secondary: 280 100% 60%;
+    --gaming-accent: 290 100% 50%;
+    --gaming-dark: 240 10% 3.9%;
+    --gaming-darker: 240 15% 2%;
+    --gaming-purple: 270 100% 50%;
+    --gaming-black: 0 0% 0%;
     
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--gaming-primary)), hsl(var(--gaming-secondary)));
     --gradient-hero: linear-gradient(135deg, hsl(var(--gaming-dark)), hsl(var(--gaming-darker)));
-    --gradient-card: linear-gradient(135deg, hsl(var(--card)) / 0.1, hsl(var(--card)) / 0.05);
-    
-    /* Shadows & Glows */
-    --shadow-neon: 0 0 30px hsl(var(--gaming-primary) / 0.3);
-    --shadow-purple: 0 0 30px hsl(var(--gaming-secondary) / 0.3);
-    --shadow-elegant: 0 20px 40px -10px hsl(var(--gaming-dark) / 0.5);
-    
-    --radius: 0.75rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    /* Dark theme - current gaming theme */
-    --background: 222 84% 4.9%;
-    --foreground: 180 100% 95%;
-    --card: 226 71% 8%;
-    --card-foreground: 180 100% 95%;
-    --popover: 226 71% 8%;
-    --popover-foreground: 180 100% 95%;
-    --primary: 177 100% 50%;
-    --primary-foreground: 222 84% 4.9%;
-    --secondary: 298 84% 60%;
-    --secondary-foreground: 180 100% 95%;
-    --muted: 226 71% 12%;
-    --muted-foreground: 180 20% 70%;
-    --accent: 298 84% 60%;
-    --accent-foreground: 180 100% 95%;
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 180 100% 95%;
-    --border: 226 71% 15%;
-    --input: 226 71% 12%;
-    --ring: 177 100% 50%;
-    --gaming-primary: 177 100% 50%;
-    --gaming-secondary: 298 84% 60%;
-    --gaming-accent: 60 100% 50%;
-    --gaming-dark: 222 84% 4.9%;
-    --gaming-darker: 220 85% 3%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .light {
-    /* Light theme */
-    --background: 0 0% 100%;
-    --foreground: 222 84% 4.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 222 84% 4.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 222 84% 4.9%;
-    --primary: 177 100% 40%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 298 84% 50%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 210 40% 96%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 298 84% 50%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 177 100% 40%;
-    --gaming-primary: 177 100% 40%;
-    --gaming-secondary: 298 84% 50%;
-    --gaming-accent: 60 100% 45%;
-    --gaming-dark: 0 0% 100%;
-    --gaming-darker: 210 40% 98%;
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --gradient-card: linear-gradient(135deg, hsl(var(--card)) / 0.8, hsl(var(--card)) / 0.4);
+    --gradient-purple: linear-gradient(135deg, #8B5CF6, #A855F7, #C084FC);
+    --gradient-dark: linear-gradient(135deg, #0F0F23, #1A1A2E, #16213E);
+    --gradient-glow: linear-gradient(135deg, rgba(139, 92, 246, 0.3), rgba(168, 85, 247, 0.3));
   }
 }
 
@@ -150,81 +58,266 @@ All colors MUST be HSL.
   * {
     @apply border-border;
   }
-
-  body {
-    @apply bg-background text-foreground overflow-x-hidden;
-    background: var(--gradient-hero);
-  }
   
+  body {
+    @apply bg-background text-foreground;
+    background: linear-gradient(135deg, #0F0F23, #1A1A2E, #16213E);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* Smooth scroll behavior */
   html {
     scroll-behavior: smooth;
   }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--gaming-dark));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, hsl(var(--gaming-primary)), hsl(var(--gaming-secondary)));
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, hsl(var(--gaming-secondary)), hsl(var(--gaming-accent)));
+  }
 }
 
+/* Modern Animations and Effects */
 @layer components {
-  .glass-card {
-    @apply backdrop-blur-lg bg-white/5 border border-white/10 rounded-xl;
-    box-shadow: var(--shadow-elegant);
+  .glow-effect {
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.3),
+                0 0 40px rgba(139, 92, 246, 0.2),
+                0 0 60px rgba(139, 92, 246, 0.1);
   }
-  
-  .neon-glow {
-    filter: drop-shadow(var(--shadow-neon));
+
+  .hover-glow {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
-  
-  .purple-glow {
-    filter: drop-shadow(var(--shadow-purple));
+
+  .hover-glow:hover {
+    box-shadow: 0 0 30px rgba(139, 92, 246, 0.4),
+                0 0 60px rgba(139, 92, 246, 0.3),
+                0 0 90px rgba(139, 92, 246, 0.2);
+    transform: translateY(-2px);
   }
-  
-  .gradient-text {
-    background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+
+  .glass-effect {
+    background: rgba(139, 92, 246, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(139, 92, 246, 0.2);
   }
-  
+
+  .neon-border {
+    border: 2px solid transparent;
+    background: linear-gradient(hsl(var(--gaming-dark)), hsl(var(--gaming-dark))) padding-box,
+                linear-gradient(135deg, hsl(var(--gaming-primary)), hsl(var(--gaming-secondary))) border-box;
+  }
+
   .floating-animation {
-    animation: float 6s ease-in-out infinite;
+    animation: floating 3s ease-in-out infinite;
   }
-  
+
   .pulse-glow {
     animation: pulse-glow 2s ease-in-out infinite alternate;
   }
-}
 
-@layer utilities {
-  .text-shadow {
-    text-shadow: 0 0 20px currentColor;
+  .slide-in-up {
+    animation: slide-in-up 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .fade-in {
+    animation: fade-in 1s ease-out;
+  }
+
+  .scale-in {
+    animation: scale-in 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, hsl(var(--gaming-primary)), hsl(var(--gaming-secondary)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .card-hover {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(139, 92, 246, 0.2);
+  }
+
+  .card-hover:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(139, 92, 246, 0.3),
+                0 10px 20px rgba(0, 0, 0, 0.2);
+    border-color: rgba(139, 92, 246, 0.5);
+  }
+
+  .image-hover {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+  }
+
+  .image-hover:hover {
+    transform: scale(1.05);
+  }
+
+  .image-hover img {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .image-hover:hover img {
+    transform: scale(1.1);
+    filter: brightness(1.1) contrast(1.1);
   }
 }
 
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-20px); }
+/* Keyframe Animations */
+@keyframes floating {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 @keyframes pulse-glow {
-  0% { filter: drop-shadow(0 0 5px currentColor); }
-  100% { filter: drop-shadow(0 0 25px currentColor); }
+  0% {
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 40px rgba(139, 92, 246, 0.6);
+  }
 }
 
-@keyframes fade-in-up {
-  from {
+@keyframes slide-in-up {
+  0% {
     opacity: 0;
     transform: translateY(30px);
   }
-  to {
+  100% {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-@keyframes scale-in {
-  from {
+@keyframes fade-in {
+  0% {
     opacity: 0;
-    transform: scale(0.8);
   }
-  to {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes scale-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
     opacity: 1;
     transform: scale(1);
   }
+}
+
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Background Particles Animation */
+.particles-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.particle {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: rgba(139, 92, 246, 0.6);
+  border-radius: 50%;
+  animation: particle-float 6s infinite linear;
+}
+
+@keyframes particle-float {
+  0% {
+    transform: translateY(100vh) translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-10vh) translateX(100px);
+    opacity: 0;
+  }
+}
+
+/* Button Styles */
+.btn-primary {
+  @apply bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800;
+  @apply text-white font-semibold py-3 px-6 rounded-lg;
+  @apply transition-all duration-300 ease-in-out;
+  @apply hover:shadow-lg hover:shadow-purple-500/25;
+  @apply hover:-translate-y-1 transform;
+}
+
+.btn-secondary {
+  @apply bg-transparent border-2 border-purple-500 text-purple-400;
+  @apply hover:bg-purple-500 hover:text-white;
+  @apply font-semibold py-3 px-6 rounded-lg;
+  @apply transition-all duration-300 ease-in-out;
+  @apply hover:shadow-lg hover:shadow-purple-500/25;
+}
+
+/* Text Effects */
+.text-glow {
+  text-shadow: 0 0 10px rgba(139, 92, 246, 0.5),
+               0 0 20px rgba(139, 92, 246, 0.3),
+               0 0 30px rgba(139, 92, 246, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .card-hover:hover {
+    transform: translateY(-4px) scale(1.01);
+  }
+}
+
+/* Loading animations */
+.loading-dots {
+  display: inline-block;
+}
+
+.loading-dots::after {
+  content: '';
+  animation: loading-dots 1.5s infinite;
+}
+
+@keyframes loading-dots {
+  0%, 20% { content: '.'; }
+  40% { content: '..'; }
+  60%, 100% { content: '...'; }
 }
